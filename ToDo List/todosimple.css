@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    width: 100vw;
+    height: 15vh;
+    align-items: center;
+    padding: 2rem;
+    justify-content: space-between;
+    border: 1px solid lightpink;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.button {
+    display: flex;
+    width: 15rem;
+    justify-content: space-around;
+}
+
+.button button {
+    width: 6rem;
+    height: 2rem;
+    border: none;
+    border-radius: .3rem;
+    border: 1px solid lightgray;
+}
+
+main {
+    width: 100vw;
+    height: 85vh;
+    padding: 2rem;
+
+}
+
+.data {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid lightpink;
+    height: 3rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    display: none;
+}
+
+.data button {
+    width: 6rem;
+    height: 2rem;
+    border: none;
+    border: 1px solid lightgray;
+    border-radius: .3rem;
+}
+
+
+button {
+    font-size: 1rem;
+}
+
+.done {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.done img {
+    width: 1.5rem;
+    object-fit: contain;
+    visibility: hidden;
+}
+
+.above {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(.5px);
+    padding: 2rem;
+    visibility: hidden;
+}
+
+.adddata {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: aqua;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: .7em;
+}
+
+.adddata h2 {
+    font-size: 2.5rem;
+}
+
+.adddata input {
+    width: 100%;
+    border: none;
+    outline: none;
+    border: 1px solid lightgray;
+    height: 2.5rem;
+    font-size: 1rem;
+    padding-left: 1rem;
+    border-radius: .2rem;
+}
+
+.addbutton {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.addbutton button {
+    width: 5rem;
+    height: 2rem;
+    border: none;
+    border: 1px solid lightgray;
+    border-radius: .3rem;
+    margin-left: 1rem;
+}
