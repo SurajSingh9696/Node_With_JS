@@ -4,8 +4,11 @@ const img = document.querySelector("qrcode");
 
 const but = document.querySelector("#generate");
 
-but.addEventListener("click", async () => {
+const image = document.querySelector("#img");
+
+const mainfunction = async () => {
     if (text.value) {
+        image.style.visibility = "visible";
         const qr = await fetch("http://localhost:3500/generate", {
             method: "POST",
             headers: {
@@ -13,9 +16,14 @@ but.addEventListener("click", async () => {
             },
             body: JSON.stringify({ text: text.value })
         })
-        location.reload();
+        const url = await qr.text();
+        image.setAttribute("src", url);
     }
     else {
         alert("Please enter text");
     }
-})
+}
+
+text.addEventListener("input", mainfunction);
+
+but.addEventListener("click" , mainfunction);

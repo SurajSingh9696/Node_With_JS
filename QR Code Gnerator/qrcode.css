@@ -85,7 +85,8 @@ main {
 }
 
 .result img {
-    max-width: 70%; /* Increased to 300% for even larger size */
+    visibility: hidden;
+    max-width: 50%; /* Increased to 300% for even larger size */
     height: auto;
     border: 1px solid #eee;
     display: block;

@@ -17,13 +17,20 @@ exp.post("/generate", async (req, resp) => {
     }
     else {
         try {
-            qrcode.toFile("qrcode.svg", text, (err) => {
+            const options = {
+                errorCorrectionLevel: "H",
+                type : "image/svg",
+                width : 800,
+                height : 500,
+                quality : 1.0
+            };
+            qrcode.toDataURL(text, options,(err , url) => {
                 if (err) {
                     resp.send("Error in generating the qr code");
                     console.log("Error in generating the qr code");
                 }
                 else {
-                    resp.send("qr code created");
+                    resp.send(url);
                     console.log("qr created");
                 }
             });
